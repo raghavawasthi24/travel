@@ -13,7 +13,7 @@ export function createApp() {
   app.use(cors({
     origin: "*",
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
-    allowedHeaders: ["Content-Type", "Authorization"],
+    allowedHeaders: ["Content-Type", "Authorization", "x-user-id"],
   }));
   
   app.options("*", cors());
