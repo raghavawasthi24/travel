@@ -2,7 +2,7 @@
  * Low-level HTTP client. Single responsibility: perform requests, attach the
  * acting-user header, parse JSON, surface errors. No domain knowledge here.
  */
-const BASE = import.meta.env.VITE_BACKEND_URL || '/api';
+const BASE = import.meta.env.VITE_BACKEND_URL;
 
 // Demo: identify the acting user so backend role checks work. In production
 // this would be a real auth token. Persisted so it survives reloads.
@@ -21,7 +21,7 @@ async function request(path, { method = 'GET', body, params } = {}) {
     });
   }
 
-  const res = await fetch(url.pathname + url.search, {
+  const res = await fetch(url.toString(), {
     method,
     headers: {
       'Content-Type': 'application/json',
