@@ -2,7 +2,7 @@
  * Low-level HTTP client. Single responsibility: perform requests, attach the
  * acting-user header, parse JSON, surface errors. No domain knowledge here.
  */
-const BASE = '/api';
+const BASE = import.meta.env.BACKEND_URL || '/api';
 
 // Demo: identify the acting user so backend role checks work. In production
 // this would be a real auth token. Persisted so it survives reloads.
