@@ -1,0 +1,18 @@
+{
+  "name": "finance-bookings-backend",
+  "version": "1.0.0",
+  "description": "Finance > Bookings dashboard API (Controller-Service-Model architecture)",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "seed": "node src/seed.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.5.1"
+  }
+}
